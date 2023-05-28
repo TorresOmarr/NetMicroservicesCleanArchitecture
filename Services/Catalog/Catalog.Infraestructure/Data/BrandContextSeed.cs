@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Catalog.Infraestructure.Data
 {
-    public class BrandContextSeed
+    public static class BrandContextSeed
     {
         public static void SeedData(IMongoCollection<ProductBrand> brandCollection)
         {
