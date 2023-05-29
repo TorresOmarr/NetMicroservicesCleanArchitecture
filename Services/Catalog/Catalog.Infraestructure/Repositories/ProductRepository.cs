@@ -2,7 +2,6 @@
 using Catalog.Core.Repositories;
 using Catalog.Infraestructure.Data;
 using MongoDB.Driver;
-using System.Runtime.InteropServices;
 
 namespace Catalog.Infraestructure.Repositories
 {
@@ -66,6 +65,22 @@ namespace Catalog.Infraestructure.Repositories
                                                 .Products
                                                 .DeleteOneAsync(filter);
             return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
+        }
+
+        public async Task<IEnumerable<ProductBrand>> GetAllBrands()
+        {
+            return await _context
+                       .Brands
+                       .Find(b => true)
+                       .ToListAsync();
+        }
+
+        public async Task<IEnumerable<ProductType>> GetAllTypes()
+        {
+            return await _context
+                       .Types
+                       .Find(b => true)
+                       .ToListAsync();
         }
     }
 }
