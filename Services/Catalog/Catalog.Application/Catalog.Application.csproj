@@ -12,12 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Services\Catalog\Catalog.Core\Catalog.Core.csproj" />
-    <ProjectReference Include="..\Services\Catalog\Catalog.Infraestructure\Catalog.Infraestructure.csproj" />
+    <Folder Include="Commands\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <ProjectReference Include="..\Catalog.Core\Catalog.Core.csproj" />
+    <ProjectReference Include="..\Catalog.Infraestructure\Catalog.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>
